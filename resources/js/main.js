@@ -44,7 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		const horaFinal = horaInput.value + ":00";
 
 		if (isHoraFinalMenor(horaAtual, horaFinal)) {
-			alert("A hora final é menor que a atual.");
+            Swal.fire({
+                title: 'Countdown Clock',
+                text: 'A hora final é menor que a hora atual.',
+                icon: 'warning',
+                confirmButtonText: 'Ok'
+            });
 			return;
 		}
 
